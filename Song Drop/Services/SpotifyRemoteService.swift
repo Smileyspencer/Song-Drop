@@ -16,6 +16,8 @@ class SpotifyRemoteService: NSObject {
     
     override init() {
         let url = URL(string: "spotify-ios-quick-start://spotify-login-callback")!
+        // Integration is deleted from Spotify. I am quickly doing this because app is not deployed and I want to
+        // make application accessible.
         let config = SPTConfiguration(clientID: "c47fe2ebb6914487b1b6ca7e37acf268",
                                       redirectURL: url)
         self.appRemote = SPTAppRemote(configuration: config, logLevel: .debug)
